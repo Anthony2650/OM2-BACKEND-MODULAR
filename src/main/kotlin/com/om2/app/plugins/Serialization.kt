@@ -1,18 +1,19 @@
-package com.example.com.om2.app.plugins
+package com.om2.app.plugins
 
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
 import io.ktor.server.plugins.contentnegotiation.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
 
 fun Application.configureSerialization() {
-    install(ContentNegotiation) {
-        json()
-    }
-    routing {
-        get("/json/kotlinx-serialization") {
-            call.respond(mapOf("hello" to "world"))
+    /**
+     * Configura el plugin de Content Negotiation para manejar la serialización/deserialización JSON.
+     * Las rutas asociadas a JSON deben definirse en el módulo de routing.
+     */
+
+        install(ContentNegotiation) {
+            json()
         }
-    }
+        // Debería ir en configureRouting() o en un archivo de rutas específico.
 }
+
+

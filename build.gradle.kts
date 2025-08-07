@@ -51,4 +51,5 @@ dependencies {
 
     // Dependencia para JWT Authentication
     implementation("io.ktor:ktor-server-auth-jwt:${ktor_version}")
+    implementation("org.mindrot:jbcrypt:0.4")
 }

@@ -19,11 +19,17 @@ class AccesUserServices(private val userCRUD: UserCRUD) {
             if (user.password == password) {
                 return true
 
-            } else {
-
             }
-        } else {
-            print("❌ La contraseña es incorrecta. \n")
+
+            else {
+                println("❌ La contraseña es incorrecta para el usuario $username. \n")
+                return false
+            }
+
+        }
+
+        else {
+            println("❌ No se encontró un usuario con el username $username. \n")
             return false
         }
 

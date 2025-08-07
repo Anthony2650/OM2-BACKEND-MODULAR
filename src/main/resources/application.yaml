@@ -1,11 +1,16 @@
 ktor:
   application:
     modules:
-      - com.example.ApplicationKt.module
+      - com.example.com.om2.app.ApplicationKt.module
   deployment:
     port: 8080
 
   database:
-    url: "jdbc:postgresql://localhost:5432/OM2"
+    url: "jdbc:postgresql://localhost:5432/M1"
     user: "postgres"
-    password: "JesusGOD37"
+    password: "Jose597135tt."
+  jwt:
+    audience: "M1_App" # API
+    domain: "http://localhost:8080" # dominio del API (donde se ejecuta Ktor)
+    realm: "Acceso a la API de OM2"
+    secret: "JOSE597135TT.12%4$#þ▼☼8!76" # ¡CAMBIA ESTO POR UNA CLAVE FUERTE Y LARGA!
